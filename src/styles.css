@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+
+body {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+
+
+}
+
+th, td {
+  padding: 5px;
+
+}
+
+
