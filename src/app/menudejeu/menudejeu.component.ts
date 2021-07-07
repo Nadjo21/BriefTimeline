@@ -13,12 +13,6 @@ export class MenudejeuComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  editButton(){
-
-  }
-  playbutton(){
-
-  }
   deleteButton(){
 
   }

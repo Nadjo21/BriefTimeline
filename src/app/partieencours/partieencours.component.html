@@ -1,1 +1,10 @@
-<p>partieencours works!</p>
+
+
+<form [formGroup]="answerForm">
+  <label for="answer"> Reponse: </label>
+  <input id="answer" type="number" formControlName="reponse">
+
+
+  <button (submit)="guessButton">Deviner!</button>
+</form>
+

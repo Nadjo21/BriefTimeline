@@ -2,12 +2,18 @@
 <!--//appComponent :je suis sur ma page principale -->
 <h1>Jouons au Timeline</h1>
 <p>
-<button (click)="returnToTheList()">Revenir a la liste des Timeline</button>
+ <button> <a routerLink= "">Revenir a la liste des Timeline</a></button>
 </p>
 <p>
-<button (click)="addATimeline()">Ajouter un Timeline</button>
+<button> <a routerLink= "addtimeline">Ajouter un Timeline</a></button>
 </p>
 
 <!--pour appeller d'autres composants sur ma page principale , je met en place un routeur comme ci dessous-->
-<app-menudejeu></app-menudejeu>
-<app-partieencours></app-partieencours>
+<!--au prealable creer les routes dans app.module.ts-->
+
+<Section id ="zone d'affichage dynamique">
+
+<router-outlet></router-outlet>
+
+</Section>
+

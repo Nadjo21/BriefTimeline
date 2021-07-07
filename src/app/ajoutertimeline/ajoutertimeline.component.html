@@ -1,0 +1,16 @@
+
+<form [formGroup]="timelineForm" >
+  <label for="name"> Nom: </label>
+  <input id="name" type="text" formControlName="nom">
+
+  <label for="category"> Categorie: </label>
+  <input id="category"  type="text" formControlName="categorie">
+
+  <label for="creationDate">Date de creation: </label>
+  <input id="creationDate" type="text" formControlName="datedecreation">
+  <button (submit)="saveTimeline">Sauver le Timeline</button>
+</form>
+
+
+
+

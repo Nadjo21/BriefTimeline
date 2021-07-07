@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
+
+
 
 @Component({
   selector: 'app-partieencours',
@@ -7,7 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PartieencoursComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private formBuilder: FormBuilder) { }
+
+  answerForm = this.formBuilder.group({
+    answer: '',
+
+  })
+
+  guessButton(){}
 
   ngOnInit(): void {
   }
