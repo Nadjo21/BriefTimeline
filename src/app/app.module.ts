@@ -10,6 +10,7 @@ import {MenueditionComponent} from './menuedition/menuedition.component';
 import { AjoutertimelineComponent } from './ajoutertimeline/ajoutertimeline.component';
 import {HttpClientModule} from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,9 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
+
+
+
     RouterModule.forRoot([
       {path: '', component: MenudejeuComponent},
       {path: 'edit', component: MenueditionComponent},

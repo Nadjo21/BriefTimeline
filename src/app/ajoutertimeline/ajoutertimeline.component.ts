@@ -12,14 +12,26 @@ export class AjoutertimelineComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) { }
 
   timelineForm = this.formBuilder.group({
-    name: '',
-    category: '',
-    creationDate: '',
+    name: 'testname',
+    category: 'testcat',
+    creationDate: '01/07/2021',
   })
 
   saveTimeline(){}
+
+  cardForm = this.formBuilder.group({
+    name: '',
+    creationDate: '',
+    imageurl: '',
+    description:'',
+  })
+
+  saveCard(){}
 
   ngOnInit(): void {
   }
 
 }
+
+
+

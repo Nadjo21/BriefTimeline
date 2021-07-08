@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {TimelineService} from "../timeline.service";
+
+
 
 @Component({
   selector: 'app-menudejeu',
@@ -7,7 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenudejeuComponent implements OnInit {
 
-  constructor() { }
+
+  timelineList= this.timelineService.getTimelineList()
+
+  constructor(private timelineService: TimelineService) { }
 
 
   ngOnInit(): void {
@@ -18,3 +24,5 @@ export class MenudejeuComponent implements OnInit {
   }
 
 }
+
+

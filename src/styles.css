@@ -6,6 +6,7 @@ body {
   width: 90%;
   margin: auto;
   font-family: 'Roboto', sans-serif;
+  color: coral;
 }
 
 
@@ -22,5 +23,6 @@ th, td {
   padding: 5px;
 
 }
+
 
 

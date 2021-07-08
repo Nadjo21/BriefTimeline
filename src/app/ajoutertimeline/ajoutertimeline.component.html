@@ -1,4 +1,5 @@
 
+<div>
 <form [formGroup]="timelineForm" >
   <label for="name"> Nom: </label>
   <input id="name" type="text" formControlName="nom">
@@ -7,10 +8,29 @@
   <input id="category"  type="text" formControlName="categorie">
 
   <label for="creationDate">Date de creation: </label>
-  <input id="creationDate" type="text" formControlName="datedecreation">
-  <button (submit)="saveTimeline">Sauver le Timeline</button>
+  <input id="creationDate" type="datetime-local" formControlName="datedecreation">
+  <button  (submit)="saveTimeline">Sauver le Timeline</button>
+  <a routerLink= "addcard"></a>
+  </form>
+</div>
+
+
+
+
+<div>
+  <h2>Edition d'une carte</h2>
+  <form [formGroup]="cardForm" >
+  <label for="name"> Nom: </label>
+  <input id="name" type="text" formControlName="nom">
+
+  <label for="category"> Categorie: </label>
+  <input id="category"  type="text" formControlName="datedecreation">
+
+    <label for="imageurl"> Url d'image: </label>
+    <input id="imageurl"  type="text" formControlName="urlimage">
+
+  <label for="creationDate">Date de creation: </label>
+  <input id="creationDate" type="datetime-local" formControlName="sauvegardecarte">
+  <button (submit)="saveCard">Sauver la carte</button>
 </form>
-
-
-
-
+</div>

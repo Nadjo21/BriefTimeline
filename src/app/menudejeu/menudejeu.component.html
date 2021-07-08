@@ -13,19 +13,21 @@
   </tr>
   </thead>
   <tbody>
-  <tr>
-    <td>{{''}}</td>
-    <td>{{''}}</td>
-    <td>{{''}}</td>
-    <td>{{''}}</td>
-    <td>{{''}}</td>
-    <td>{{''}}</td>
+      <tr *ngFor="let timeline of timelineList | async">
+    <td>{{timeline.id }}</td>
+    <td>{{timeline.name}}</td>
+    <td>{{timeline.category}}</td>
+    <td>{{timeline.creationDate}}</td>
+    <td>{{timeline.updateDate}}</td>
+    <td>{{timeline.cardList.length}}</td>
     <td> <a routerLink= "edit">Editer</a></td>
     <td> <a routerLink= "play">Jouer</a></td>
       <td><button (click)="deleteButton()">Supprimer</button></td>
   </tr>
   </tbody>
 </table>
+
+
 
 
 
