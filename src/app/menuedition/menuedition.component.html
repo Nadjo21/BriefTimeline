@@ -1,2 +1,24 @@
-<p>menuedition works!</p>
+<table>
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Nom</th>
+    <th>Date</th>
+    <th>Url d'image</th>
+    <th>Description</th>
+    <th>Editer?</th>
+    <th>Supprimer?</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let card of cardList| async">
+    <td>{{card.id }}</td>
+    <td>{{card.name}}</td>
+    <td>{{card.date}}</td>
+    <td>{{card.imageUrl}}</td>
+    <td>{{card.description}}</td>
+    <td><a routerLink="edit">Editer</a></td>
+    <td><a routerLink="play">Supprimer</a></td>
+     </tr>
+  </tbody>
 

@@ -25,4 +25,18 @@ th, td {
 }
 
 
+/* De base */
+#reponseCachée {
+  background-color:coral;
+}
+
+/* Au survol */
+#reponseCachée:hover {
+  background-color:white;
+  cursor:pointer;
+}
+
+#Reponsesitugalères{
+  color: darkviolet;
+}
 

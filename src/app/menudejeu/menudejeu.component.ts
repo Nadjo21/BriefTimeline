@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {TimelineService} from "../timeline.service";
+import {MainService} from "../main.service";
 
 
 
@@ -13,11 +13,13 @@ export class MenudejeuComponent implements OnInit {
 
   timelineList= this.timelineService.getTimelineList()
 
-  constructor(private timelineService: TimelineService) { }
-
+  constructor(private timelineService: MainService) { }
 
   ngOnInit(): void {
   }
+
+
+
 
   deleteButton(){
 

@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {MainService} from "../main.service";
+import {Card} from "../card";
+import {Observable} from "rxjs";
+
+
 
 @Component({
   selector: 'app-menuedition',
@@ -7,11 +12,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenueditionComponent implements OnInit {
 
-  constructor() { }
+  cardList = this.cardService.getCardList(1)
 
-  ngOnInit(): void {
+
+  constructor(private cardService: MainService) {
   }
 
+  ngOnInit(): void {
 
+
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
 

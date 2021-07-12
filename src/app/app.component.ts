@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {TimelineService} from "./timeline.service";
+import {MainService} from "./main.service";
 
 
 @Component({
@@ -10,14 +10,8 @@ import {TimelineService} from "./timeline.service";
 export class AppComponent {
   title = 'Brief-Timeline';
 
- //timelineList= this.timelineService.getTimelineList()
-
-
-  constructor(private timelineService: TimelineService) {
+  constructor() {
   }
 
-  returnToTheList(){
-  }
-  addATimeline(){
-  }
+
 }

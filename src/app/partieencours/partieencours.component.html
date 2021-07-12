@@ -1,10 +1,36 @@
 
 
-<form [formGroup]="answerForm">
-  <label for="answer"> Reponse: </label>
-  <input id="answer" type="number" formControlName="reponse">
 
-
-  <button (submit)="guessButton">Deviner!</button>
+<form [formGroup]="answerForm" (ngSubmit)="submitButton()">
+   <label for="answer"> Reponse: </label>
+  <input id="answer" type="number" formControlName="dateD">
+  <button type="submit">Deviner!</button>
 </form>
 
+<!--ici code  a adapter-->
+<!-- Une section avec la carte à deviner -->
+<Section id="zone carte a deviner"></Section>
+<!-- Une carte que je vais afficher dans une div avec ses propriétés -->
+<div *ngIf="guessingCard">
+  <h2>Carte à deviner :</h2>
+  <h3>{{guessingCard.name}}</h3>
+  <img class="fit-picture"
+       src={{guessingCard.imageUrl}}
+       alt="">
+
+  <p>{{guessingCard.description}}</p>
+  <p id="Reponsesitugalères"> La réponse si tu galères :</p>
+  <span id="reponseCachée"> REPONSE :{{guessingCard.date }}  </span>
+</div>
+
+<!-- Une section avec la liste des cartes déjà devinées -->
+<Section id="cartes trouvées"></Section>
+<!-- Une ngFor pour afficher toutes les cartes déjà devinées -->
+<h2>Cartes trouvées!</h2>
+<div *ngFor="let guessedCard of cardsAlreadyGuessed">
+  <h3>{{guessedCard.name}}</h3>
+  <img class="fit-picture"
+       src={{guessedCard.imageUrl}}
+       alt="">
+  <p>{{guessedCard.description}}</p>
+</div>
